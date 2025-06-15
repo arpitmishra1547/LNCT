@@ -1,0 +1,392 @@
+.assistantContainer {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+
+.assistantButton {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #007bff, #00bfff);
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(0, 123, 255, 0.4);
+  }
+  70% {
+    box-shadow: 0 0 0 15px rgba(0, 123, 255, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(0, 123, 255, 0);
+  }
+}
+
+.assistantButton:hover {
+  transform: scale(1.1) rotate(5deg);
+  background: linear-gradient(135deg, #00bfff, #007bff);
+}
+
+.assistantIcon {
+  font-size: 24px;
+  animation: bounce 1s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-3px);
+  }
+}
+
+.chatWindow {
+  position: fixed;
+  bottom: 90px;
+  right: 20px;
+  width: 350px;
+  height: 500px;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  animation: slideIn 0.3s ease-out;
+  transform-origin: bottom right;
+}
+
+@keyframes slideIn {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.chatHeader {
+  padding: 15px;
+  background: linear-gradient(135deg, #007bff, #00bfff);
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.chatHeader h3 {
+  margin: 0;
+  font-size: 18px;
+  animation: fadeIn 0.5s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.closeButton {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  padding: 0;
+  line-height: 1;
+  transition: transform 0.2s ease;
+}
+
+.closeButton:hover {
+  transform: rotate(90deg);
+}
+
+.chatContent {
+  flex: 1;
+  padding: 15px;
+  overflow-y: auto;
+}
+
+.messageContainer {
+  margin-bottom: 15px;
+  animation: messageSlide 0.3s ease-out;
+}
+
+@keyframes messageSlide {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.question {
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.answer {
+  background-color: #f0f2f5;
+  padding: 10px;
+  border-radius: 8px;
+  margin-left: 10px;
+  position: relative;
+  animation: answerPop 0.3s ease-out;
+}
+
+@keyframes answerPop {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.currentQuestion {
+  background-color: #e3f2fd;
+  padding: 10px;
+  border-radius: 8px;
+  margin-top: 10px;
+  font-weight: 500;
+  animation: questionPulse 2s infinite;
+}
+
+@keyframes questionPulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(0, 123, 255, 0.2);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(0, 123, 255, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(0, 123, 255, 0);
+  }
+}
+
+.inputForm {
+  padding: 15px;
+  border-top: 1px solid #eee;
+  display: flex;
+  gap: 10px;
+  animation: slideUp 0.3s ease-out;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.input:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.1);
+}
+
+.sendButton {
+  padding: 10px 20px;
+  background: linear-gradient(135deg, #007bff, #00bfff);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.sendButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 123, 255, 0.2);
+}
+
+.sendButton:active {
+  transform: translateY(0);
+}
+
+.headerContent {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.statusIndicator {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.statusDot {
+  width: 8px;
+  height: 8px;
+  background-color: #4CAF50;
+  border-radius: 50%;
+  animation: pulse 2s infinite;
+}
+
+.botIcon, .userIcon {
+  margin-right: 8px;
+  font-size: 18px;
+}
+
+.typingIndicator {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 8px 12px;
+  background-color: #e3f2fd;
+  border-radius: 8px;
+  width: fit-content;
+}
+
+.typingIndicator span {
+  width: 8px;
+  height: 8px;
+  background-color: #007bff;
+  border-radius: 50%;
+  animation: typing 1s infinite;
+}
+
+.typingIndicator span:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.typingIndicator span:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes typing {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+.sendButton:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+.sendButton:disabled:hover {
+  transform: none;
+  box-shadow: none;
+}
+
+.welcomeBox {
+  position: fixed;
+  bottom: 20px;
+  right: 90px;
+  background: linear-gradient(135deg, #007bff, #00bfff);
+  color: white;
+  padding: 12px;
+  border-radius: 8px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+  z-index: 1000;
+  width: 220px;
+  animation: welcomeSlideIn 0.5s ease-out;
+}
+
+@keyframes welcomeSlideIn {
+  from {
+    transform: translateX(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.welcomeCloseButton {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 0;
+  line-height: 1;
+  opacity: 0.8;
+  transition: all 0.2s ease;
+}
+
+.welcomeCloseButton:hover {
+  opacity: 1;
+  transform: rotate(90deg);
+}
+
+.welcomeContent {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.welcomeIcon {
+  font-size: 18px;
+  animation: wave 1s infinite;
+}
+
+@keyframes wave {
+  0%, 100% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(-20deg);
+  }
+  75% {
+    transform: rotate(20deg);
+  }
+}
+
+.welcomeContent p {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.3;
+  font-weight: 500;
+} 

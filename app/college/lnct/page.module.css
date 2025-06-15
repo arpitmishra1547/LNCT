@@ -1,0 +1,37 @@
+.container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  padding: 2rem;
+}
+
+.welcomeSection {
+  background: white;
+  padding: 3rem;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  max-width: 800px;
+  width: 100%;
+}
+
+.title {
+  font-size: 3rem;
+  color: #1a237e;
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+
+.subtitle {
+  font-size: 1.5rem;
+  color: #455a64;
+  margin-bottom: 2rem;
+}
+
+.content {
+  font-size: 1.2rem;
+  color: #546e7a;
+  line-height: 1.6;
+} 

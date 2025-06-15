@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 const Footer = () => {
   return (
-    <footer className="text-white" style={{ background: 'linear-gradient(rgba(78, 102, 136, 0.52) 0%, rgba(113, 192, 187, 0.04) 100%)' }}>
+    <footer className="text-white" style={{ backgroundColor: '#1D2B53' }}>
       {/* Four Boxes Section */}
       <div className="w-full">
         <div className="grid grid-cols-4">

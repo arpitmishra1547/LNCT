@@ -1,4 +1,5 @@
 "use client";
+import React from 'react';
 import { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -15,22 +16,38 @@ const TopNavigation = () => {
         { 
           name: 'LNCT Bhopal Campus',
           path: '/campuses/bhopal',
-          logo: '/images/bhopal-campus-logo.png'
+          logo: '/images/LNCT-logo (2).png'
         },
         { 
           name: 'LNCT Indore Campus',
           path: '/campuses/indore',
-          logo: '/images/indore-campus-logo.png'
+          logo: '/images/LNCTVU-1.png'
         },
-        { 
-          name: 'LNCT Group of Colleges',
-          path: '/campuses/group',
-          logo: '/images/group-logo.png'
-        },
+,
         { 
           name: 'LNCT University',
           path: '/campuses/university',
-          logo: '/images/university-logo.png'
+          logo: '/images/New-logo.png'
+        },
+        { 
+          name: 'LNCT Jabalpur',
+          path: '/campuses/group',
+          logo: '/images/logo.png'
+        },
+        { 
+          name: 'JNCT Bhopal',
+          path: '/campuses/group',
+          logo: '/images/JNCT-1-1.png'
+        },
+        { 
+          name: 'Rishiraj College Bhopal',
+          path: '/campuses/group',
+          logo: '/images/logo2.jpg'
+        },
+        { 
+          name: 'CEC Bilaspur',
+          path: '/campuses/group',
+          logo: '/images/cec_logo-1.png'
         }
       ]
     },
@@ -41,19 +58,18 @@ const TopNavigation = () => {
   ];
 
   return (
-    <div className="fixed -top-10 left-0 right-0 z-50 flex items-center">
-      <div className="w-full px-4 sm:px-6 lg:px-8 flex items-center">
+    <div className="bg-gray-900 pt-0 px-2 pb-2 items-center text-white text-center text-sm w-full">
+      <div className="w-full flex items-center pt-0">
         {/* Logo */}
-        <div className="relative w-44 h-44 flex-shrink-0">
-          <Image
-            src="/images/LNCT-Logo.png"
+        {/* <div className="relative w-45 h-45 flex-shrink-0">
+          <Image 
+            src="/images/LNCT-Logo (2).png"
             alt="LNCT Logo"
             fill
             style={{ objectFit: 'contain' }}
             priority
-            className="rounded-full"
           />
-        </div>
+        </div> */}
 
         {/* Additional Links - Centered with equal spacing */}
         <div className="flex-1 flex items-center justify-center">

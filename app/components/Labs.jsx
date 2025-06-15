@@ -65,10 +65,11 @@ const Labs = () => {
           {labSections.map((section) => (
             <div 
               key={section.id}
-              className="w-[24%] h-[13vh] flex-shrink-0 border border-gray-300 rounded-lg overflow-hidden hover:shadow-lg transition-all duration-300 bg-[#FFF5F5] flex items-center p-3 cursor-pointer"
+              className={`w-[24%] h-[13vh] flex-shrink-0 border ${currentSectionIndex === labSections.findIndex(s => s.id === section.id) ? 'border-red-600' : 'border-gray-300'} rounded-lg overflow-hidden hover:shadow-lg transition-all duration-300 bg-[#FFF5F5] flex items-center p-3 cursor-pointer`}
+              onClick={() => setCurrentSectionIndex(labSections.findIndex(s => s.id === section.id))}
             >
               <div className="flex-1 px-3">
-                <h3 className="text-lg font-semibold text-gray-800 truncate">{section.name}</h3>
+                <h3 className={`text-lg font-semibold ${currentSectionIndex === labSections.findIndex(s => s.id === section.id) ? 'text-red-600' : 'text-gray-800'} truncate`}>{section.name}</h3>
               </div>
               <div className="w-[11vh] h-[11vh] relative flex-shrink-0">
                 <img
