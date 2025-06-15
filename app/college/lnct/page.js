@@ -41,7 +41,7 @@ const LNCTPage = () => {
               extracurricular activities – Among Top Engineering Colleges in Bhopal and Central India.
             </p>
             <p className="text-lg leading-relaxed">
-              LNCT's 5th accreditation by the NBA! It's a testament to the excellent quality of Computer Science &
+              LNCT&apos;s 5th accreditation by the NBA! It&apos;s a testament to the excellent quality of Computer Science &
               Engineering, Electronics and Communication Engineering, Electrical and Electronics Engineering,
               Mechanical Engineering, and Civil Engineering programs. This accreditation opens up limitless
               opportunities for students to soar high and achieve success in their careers.
